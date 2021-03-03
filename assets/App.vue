@@ -7,11 +7,12 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
   export default {
-    data() {
-      return {
-        hello: 'Hello Symfony'
-      }
+    computed: {
+      ...mapState({
+        hello: state=>state.hello
+      })
     },
   }
 </script>
