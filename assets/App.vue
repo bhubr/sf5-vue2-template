@@ -8,11 +8,11 @@
 </template>
 
 <script>
-import {mapState} from 'vuex'
-import apiServices from "./services/apiServices";
+import { mapState } from 'vuex'
+import apiServices from './services/apiServices'
 
 export default {
-  data() {
+  data () {
     return {
       results: {}
     }
@@ -22,14 +22,14 @@ export default {
       hello: state => state.hello
     })
   },
-  mounted() {
+  mounted () {
     apiServices.getApiTest()
-        .then(response => {
-          this.results = response.data.apiMessage
-        })
-        .catch(error => {
-          console.log(`There was a problem fetching events: ${error.message}`)
-        })
+      .then(response => {
+        this.results = response.data.apiMessage
+      })
+      .catch(error => {
+        console.log(`There was a problem fetching events: ${error.message}`)
+      })
   }
 }
 </script>

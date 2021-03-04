@@ -6,18 +6,17 @@
  */
 
 // any CSS you import will output into a single css file (app.css in this case)
-import './styles/app.css';
+import './styles/app.css'
 
 // start the Stimulus application
-import './bootstrap';
-
+import './bootstrap'
 
 import Vue from 'vue'
 import store from './store'
-import App from "./App.vue"
+import App from './App.vue'
 
 new Vue({
-    store,
-    components: { App },
-    template: "<App />"
-}).$mount("#app");
+  store,
+  components: { App },
+  template: '<App />'
+}).$mount('#app')
